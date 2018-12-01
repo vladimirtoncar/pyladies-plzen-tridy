@@ -10,11 +10,9 @@ class HledacPrvocisel(Thread):
         self.horni_mez = h
 
     def run(self):
-        # Tady potrebujeme doplnit prohledani intervalu 
-        # od dolni meze po horni mez
-        # Kazde nalezene prvocislo chceme vytisknout
-        # Jo a bylo by fajn vytisknout, ktere vlakno prvocislo naslo
-        pass
+        for i in range(self.dolni_mez, self.horni_mez):
+            if je_prvocislo(i):
+                print(self.name, i)
 
 # end class
 
